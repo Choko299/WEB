@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კონტაქტი</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>დაგვიკავშირდით</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">მთავარი</a></li>
+                    <li><a href="#contact">კონტაქტი</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container contact-section">
+        <div class="form-box">
+            <h2>დაგვიკავშირდით</h2>
+            <form id="contact-form">
+                <label for="name">სახელი:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="email">ელ-ფოსტა:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">შეტყობინება:</label>
+                <textarea id="message" name="message" rows="5" required></textarea><br>
+
+                <button type="submit">გაგზავნა</button>
+                <p id="msg" class="message-status"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 საბა ჩოკოშვილი. ყველა უფლება დაცულია.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="#" aria-label="GitHub"><img src="images/github.png" alt="GitHub"></a>
+                <a href="#" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
