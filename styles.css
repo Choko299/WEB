@@ -1,0 +1,280 @@
+/* Generals */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #333;
+    --light-bg: #f4f4f4;
+    --dark-bg: #222;
+    --text-color: #333;
+    --light-text: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header & Navigation */
+.hero {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero nav a {
+    color: var(--light-text);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.hero nav a:hover {
+    border-bottom: 2px solid var(--primary-color);
+    text-decoration: none;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 40px 0;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-color: var(--primary-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent look */
+    object-fit: cover; /* Ensures images cover the area */
+}
+
+.portfolio-item-content {
+    padding: 15px;
+    flex-grow: 1; /* Allows content to expand */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-item-content h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.portfolio-item-content p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer .social-links img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    display: inline-block; /* To allow horizontal alignment */
+}
+
+/* Contact Form Specific Styles */
+.contact-section {
+    padding: 40px 20px;
+}
+
+.form-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 40px auto; /* Centers the form box */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.form-box label {
+    display: block; /* Each label on a new line */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box textarea {
+    width: calc(100% - 22px); /* Full width minus padding/border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-box input[type="text"]:focus,
+.form-box input[type="email"]:focus,
+.form-box textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2); /* Light green shadow */
+}
+
+.form-box button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: block; /* Make button full width */
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.form-box button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.message-status {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green; /* Default success color */
+}
+
+.message-status.error {
+    color: red; /* Error message color */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .hero nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="email"],
+    .form-box textarea {
+        width: calc(100% - 20px); /* Adjust for smaller padding */
+    }
+}
